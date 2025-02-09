@@ -42,8 +42,9 @@ WORKDIR /var/www/html
 # Copiar archivos de la aplicación
 COPY . .
 
-# Configurar enlaces simbólicos para assets
-RUN ln -s /var/www/html/assets /var/www/html/public/assets
+# Crear directorio public y configurar enlaces simbólicos
+RUN mkdir -p /var/www/html/public && \
+    ln -s /var/www/html/assets /var/www/html/public/assets
 
 # Establecer permisos correctos
 RUN chown -R www-data:www-data /var/www/html && \

@@ -39,5 +39,13 @@ RUN chown -R www-data:www-data /var/www/html \
 
 WORKDIR /var/www/html
 
+# Copiar archivos de la aplicación
+COPY . .
+
+# Establecer permisos correctos
+RUN chown -R www-data:www-data /var/www/html && \
+    find /var/www/html -type f -exec chmod 644 {} \; && \
+    find /var/www/html -type d -exec chmod 755 {} \;
+
 # Limpiar cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*

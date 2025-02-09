@@ -1,4 +1,4 @@
-version: '3.8'
+ 
 
 services:
   web:
@@ -7,6 +7,10 @@ services:
       - "80:80"
     environment:
       - APACHE_DOCUMENT_ROOT=/var/www/html
+      - DB_HOST=xcow0g8cwkgkgwggw4kko0s0
+      - DB_USER=mysql
+      - DB_PASS=G11avYQ2gtsAN0Sx58u8QSOUEDoBhWnPDUydzv720s9Z4s2OHcirA7rnzOSLcyLC
+      - DB_NAME=inventario_db
     volumes:
       - ./:/var/www/html
     networks:

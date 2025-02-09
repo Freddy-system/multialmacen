@@ -19,8 +19,10 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     mysqli \
     gd
 
-# Habilitar mod_rewrite para Apache
-RUN a2enmod rewrite
+# Habilitar mod_rewrite y otras configuraciones de Apache
+RUN a2enmod rewrite && \
+    echo '<FilesMatch \.php$>\n    SetHandler application/x-httpd-php\n</FilesMatch>' > /etc/apache2/conf-available/php.conf && \
+    a2enconf php
 
 # Configurar PHP
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \

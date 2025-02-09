@@ -36,17 +36,28 @@ RUN echo '\
 <VirtualHost *:80>\
     DocumentRoot ${APACHE_DOCUMENT_ROOT}\
     DirectoryIndex index.php\
+\
     <Directory ${APACHE_DOCUMENT_ROOT}>\
         Options -Indexes +FollowSymLinks\
         AllowOverride All\
         Require all granted\
-        <FilesMatch \\.php$>\
-            SetHandler application/x-httpd-php\
-        </FilesMatch>\
-        <FilesMatch \\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$>\
-            SetHandler application/octet-stream\
-        </FilesMatch>\
     </Directory>\
+\
+    <FilesMatch "\.php$">\
+        SetHandler application/x-httpd-php\
+    </FilesMatch>\
+\
+    AddType text/javascript .js\
+    AddType text/css .css\
+    AddType image/svg+xml .svg\
+    AddType application/x-font-woff .woff\
+    AddType application/x-font-woff2 .woff2\
+    AddType application/x-font-ttf .ttf\
+    AddType application/x-font-eot .eot\
+\
+    <LocationMatch "\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">\
+        Header set Cache-Control "max-age=31536000"\
+    </LocationMatch>\
 </VirtualHost>' > /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html

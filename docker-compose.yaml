@@ -22,10 +22,10 @@ services:
     image: mysql:8
     container_name: xcow0g8cwkgkgwggw4kko0s0
     environment:
-      - MYSQL_ROOT_PASSWORD=${DB_PASS}
-      - MYSQL_DATABASE=${DB_NAME}
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASS}
+      - MYSQL_ROOT_PASSWORD=G11avYQ2gtsAN0Sx58u8QSOUEDoBhWnPDUydzv720s9Z4s2OHcirA7rnzOSLcyLC
+      - MYSQL_DATABASE=inventario_db
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=G11avYQ2gtsAN0Sx58u8QSOUEDoBhWnPDUydzv720s9Z4s2OHcirA7rnzOSLcyLC
     volumes:
       - mysql_data:/var/lib/mysql
     networks:

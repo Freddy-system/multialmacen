@@ -1,0 +1,36 @@
+# Archivos de instalación y configuración
+instalacion.md
+.env
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Directorios y archivos de dependencias
+/vendor/
+node_modules/
+
+# Archivos de logs
+*.log
+/logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Archivos de respaldo
+*.bak
+*.backup
+*~
+
+# Archivos de configuración local
+.env.local
+.env.*.local
+
+# Directorios de almacenamiento
+/storage/*.key
+/storage/logs/
+/storage/framework/
+/storage/app/

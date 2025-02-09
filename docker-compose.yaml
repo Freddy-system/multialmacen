@@ -9,7 +9,7 @@ services:
       - APACHE_DOCUMENT_ROOT=/var/www/html
       - DB_HOST=xcow0g8cwkgkgwggw4kko0s0
       - DB_USER=mysql
-      - DB_PASS=G11avYQ2gtsAN0Sx58u8QSOUEDoBhWnPDUydzv720s9Z4s2OHcirA7rnzOSLcyLC
+      - DB_PASS=mysql123
       - DB_NAME=inventario_db
     volumes:
       - ./:/var/www/html
@@ -25,7 +25,7 @@ services:
       - MYSQL_ROOT_PASSWORD=G11avYQ2gtsAN0Sx58u8QSOUEDoBhWnPDUydzv720s9Z4s2OHcirA7rnzOSLcyLC
       - MYSQL_DATABASE=inventario_db
       - MYSQL_USER=mysql
-      - MYSQL_PASSWORD=G11avYQ2gtsAN0Sx58u8QSOUEDoBhWnPDUydzv720s9Z4s2OHcirA7rnzOSLcyLC
+      - MYSQL_PASSWORD=mysql123
     volumes:
       - mysql_data:/var/lib/mysql
     networks:

@@ -11,10 +11,10 @@ class Database {
 
     private function __construct() {
         // Obtener valores de las variables de entorno
-        $this->host = getenv('DB_HOST') ?: 'mysql-database-ec0wwcs8gss4ggcgsc4oww88';
+        $this->host = getenv('DB_HOST') ?: 'inventario-mysql';
         $this->user = getenv('DB_USER') ?: 'mysql';
-        $this->pass = getenv('DB_PASS') ?: 'wWC1qD1Ax2hlU2Fs74oykyONTm0T6bzzEf80jYNLW6tOoNfiBpsPIr2N7Xkw2HBJ'; // La contraseña que configuramos
-        $this->ddbb = getenv('DB_NAME') ?: 'multialmacen_db';
+        $this->pass = getenv('DB_PASS') ?: 'G11avYQ2gtsAN0Sx58u8QSOUEDoBhWnPDUydzv720s9Z4s2OHcirA7rnzOSLcyLC';
+        $this->ddbb = getenv('DB_NAME') ?: 'inventario_db';
 
         $this->con = new mysqli($this->host, $this->user, $this->pass, $this->ddbb);
 

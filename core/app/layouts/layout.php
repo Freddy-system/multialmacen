@@ -244,208 +244,208 @@
                     </div>
                 </div>
             </footer>
-         </div>
-         <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        </div>
+        <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
             <i class="ri-arrow-up-line"></i>
         </button>
         <?php else:?>
-           <link href="assets/estilologin.css" rel="stylesheet" type="text/css" />
-    <div class="auth-page-wrapper pt-10">
-        <div class="auth-one-bg-position" id="auth-particles" style="background-image: url('storage/per/fondillo.png'); background-size: cover; background-position: center; margin-top: 0; padding: 0;">
-            <div class="bg-overlay" style="background-color: #67678F;"></div>
-            <div class="shape">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 120">
-                    <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
-                </svg>
-            </div>
-        </div>
-        <div class="auth-page-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center mt-sm-5 mb-4 text-white-50">
-                            <div>
-                                <a href="./" class="d-inline-block auth-logo">
-                                    <img src="storage/per/logo.png" alt="" height="100">
-                                </a>
-                            </div>
-                            <div class="header-text">
-                              SISTEMA DE VENTAS
-                            </div>
-                        </div>
+            <link href="/assets/estilologin.css" rel="stylesheet" type="text/css" />
+            <div class="auth-page-wrapper pt-10">
+                <div class="auth-one-bg-position" id="auth-particles" style="background-image: url('storage/per/fondillo.png'); background-size: cover; background-position: center; margin-top: 0; padding: 0;">
+                    <div class="bg-overlay" style="background-color: #67678F;"></div>
+                    <div class="shape">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 120">
+                            <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
+                        </svg>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card mt-1">
-                            <div class="card-body p-4">
-                                <div class="text-center mt-2">
-                                    <h5 class="text-primary">Iniciar sesión</h5>
-                                    <p class="text-muted">Por favor ingresa su usuario y contraseña.</p>
+                <div class="auth-page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mt-sm-5 mb-4 text-white-50">
+                                    <div>
+                                        <a href="./" class="d-inline-block auth-logo">
+                                            <img src="storage/per/logo.png" alt="" height="100">
+                                        </a>
+                                    </div>
+                                    <div class="header-text">
+                                    SISTEMA DE VENTAS
+                                    </div>
                                 </div>
-                                <div class="p-2 mt-4">
-                                    <?php if (!isset($_COOKIE['verificationCode'])) { ?>
-                                    <form id="loginForm" method="post"  action="index.php?action=access">
-                                        <?php if (isset($_SESSION['error_message'])) {
-                                                    echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>';
-                                                    unset($_SESSION['error_message']);
-                                                } ?>
-                                        <div class="mb-3">
-                                            <label for="username" class="form-label">Usuario</label>
-                                            <input autofocus type="text" autofocus autocomplete="off" class="form-control" id="username" name="usuario" required>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 col-lg-6 col-xl-5">
+                                <div class="card mt-1">
+                                    <div class="card-body p-4">
+                                        <div class="text-center mt-2">
+                                            <h5 class="text-primary">Iniciar sesión</h5>
+                                            <p class="text-muted">Por favor ingresa su usuario y contraseña.</p>
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label" for="password-input">Password</label>
-                                            <div class="position-relative auth-pass-inputgroup mb-3">
-                                                <input type="password" class="form-control pe-5 password-input" id="password-input" name="password" required>
-                                                <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="form-check">
-                                            <div class="float-end">
-                                                        <a href="javascript:void(0)"  class="text-muted">¿Olvidó su contraseña?</a>
+                                        <div class="p-2 mt-4">
+                                            <?php if (!isset($_COOKIE['verificationCode'])) { ?>
+                                            <form id="loginForm" method="post"  action="index.php?action=access">
+                                                <?php if (isset($_SESSION['error_message'])) {
+                                                            echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>';
+                                                            unset($_SESSION['error_message']);
+                                                        } ?>
+                                                <div class="mb-3">
+                                                    <label for="username" class="form-label">Usuario</label>
+                                                    <input autofocus type="text" autofocus autocomplete="off" class="form-control" id="username" name="usuario" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="password-input">Password</label>
+                                                    <div class="position-relative auth-pass-inputgroup mb-3">
+                                                        <input type="password" class="form-control pe-5 password-input" id="password-input" name="password" required>
+                                                        <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                                     </div>
-                                            <input class="form-check-input" type="checkbox" value="" id="auth-remember-check">
-                                            <label class="form-check-label" for="auth-remember-check">Recordar</label>
-                                        </div>
-                                        <div class="mt-4">
-                                            <button class="btn btn-success w-100" type="submit">Ingresar</button>
-                                        </div>
-                                    </form>
-                                    <?php } else { ?>
-                                        <form id="verificationForm" method="post"  action="index.php?action=validar">
-                                                <?php if (isset($_SESSION['error_message1'])) {
-                                                    echo '<div class="alert alert-danger">' . $_SESSION['error_message1'] . '</div>';
-                                                    unset($_SESSION['error_message1']);
-                                                } ?>
-                                                <div class="counter-container1">
-                                                    <span id="counter" data-start-time="<?php echo $_SESSION['verificationStartTime']; ?>"></span>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="username" class="form-label">validar código</label>
-                                                    <input autofocus type="text" class="form-control" name="codigo" required>
+                                                <div class="form-check">
+                                                    <div class="float-end">
+                                                                <a href="javascript:void(0)"  class="text-muted">¿Olvidó su contraseña?</a>
+                                                            </div>
+                                                    <input class="form-check-input" type="checkbox" value="" id="auth-remember-check">
+                                                    <label class="form-check-label" for="auth-remember-check">Recordar</label>
                                                 </div>
                                                 <div class="mt-4">
-                                                    <button class="btn btn-success w-100" type="submit">Validar Código</button>
+                                                    <button class="btn btn-success w-100" type="submit">Ingresar</button>
                                                 </div>
                                             </form>
-                                        <?php } ?>
-                                        <script>
-                                            document.addEventListener("DOMContentLoaded", function() {
-                                                let startTime = parseInt(document.getElementById("counter").getAttribute("data-start-time"));
-                                                let interval = setInterval(function() {
-                                                    let currentTime = Math.floor(new Date().getTime() / 1000);  
-                                                    let timeElapsed = currentTime - startTime;
-                                                    let timeRemaining = 60 - timeElapsed;
-                                                    if (timeRemaining <= 0) {
-                                                        clearInterval(interval);
-                                                        document.getElementById("counter").innerText = "¡Tiempo agotado!";
-                                                    } else {
-                                                        let minutes = Math.floor(timeRemaining / 60);
-                                                        let seconds = timeRemaining % 60;
-                                                        document.getElementById("counter").innerText = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
-                                                    }
-                                                }, 1000);
-                                            });
-                                    </script>
-                                    <form id="passwordResetForm" method="post"  action="index.php?action=recuperar" style="display: none;">
-                                                <?php if (isset($_SESSION['error_message2'])) {
-                                                    echo '<div class="alert alert-danger">' . $_SESSION['error_message2'] . '</div>';
-                                                    unset($_SESSION['error_message2']);
-                                                } ?>
-                                                <?php if (isset($_SESSION['error_message3'])) {
-                                                    echo '<div class="alert alert-success">' . $_SESSION['error_message3'] . '</div>';
-                                                    unset($_SESSION['error_message3']);
-                                                } ?>
-                                                <div class="mb-3">
-                                                    <label for="username" class="form-label">Ingresar su correo Electrónico</label>
-                                                    <input autofocus type="text" class="form-control" name="correo" required>
-                                                </div>
-
-                                                <div class="mt-4">
-                                                    <button class="btn btn-success w-100" type="submit">Validar correo</button>
-                                                </div>
-                                                <a href="javascript:void(0)" class="text-muted" onclick="showLoginForm()">Retornar</a>
-                                            </form>
+                                            <?php } else { ?>
+                                                <form id="verificationForm" method="post"  action="index.php?action=validar">
+                                                        <?php if (isset($_SESSION['error_message1'])) {
+                                                            echo '<div class="alert alert-danger">' . $_SESSION['error_message1'] . '</div>';
+                                                            unset($_SESSION['error_message1']);
+                                                        } ?>
+                                                        <div class="counter-container1">
+                                                            <span id="counter" data-start-time="<?php echo $_SESSION['verificationStartTime']; ?>"></span>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="username" class="form-label">validar código</label>
+                                                            <input autofocus type="text" class="form-control" name="codigo" required>
+                                                        </div>
+                                                        <div class="mt-4">
+                                                            <button class="btn btn-success w-100" type="submit">Validar Código</button>
+                                                        </div>
+                                                    </form>
+                                                <?php } ?>
                                                 <script>
-                                                    function showPasswordResetForm() {
-                                                        document.getElementById('loginForm').style.display = 'none';
-                                                        document.getElementById('passwordResetForm').style.display = 'block';
-                                                        localStorage.setItem('showPasswordResetForm', 'true');
-                                                        
-                                                        // Añade una entrada al historial del navegador
-                                                        history.pushState({ form: 'passwordResetForm' }, '');
-                                                    }
+                                                    document.addEventListener("DOMContentLoaded", function() {
+                                                        let startTime = parseInt(document.getElementById("counter").getAttribute("data-start-time"));
+                                                        let interval = setInterval(function() {
+                                                            let currentTime = Math.floor(new Date().getTime() / 1000);  
+                                                            let timeElapsed = currentTime - startTime;
+                                                            let timeRemaining = 60 - timeElapsed;
+                                                            if (timeRemaining <= 0) {
+                                                                clearInterval(interval);
+                                                                document.getElementById("counter").innerText = "¡Tiempo agotado!";
+                                                            } else {
+                                                                let minutes = Math.floor(timeRemaining / 60);
+                                                                let seconds = timeRemaining % 60;
+                                                                document.getElementById("counter").innerText = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+                                                            }
+                                                        }, 1000);
+                                                    });
+                                            </script>
+                                            <form id="passwordResetForm" method="post"  action="index.php?action=recuperar" style="display: none;">
+                                                        <?php if (isset($_SESSION['error_message2'])) {
+                                                            echo '<div class="alert alert-danger">' . $_SESSION['error_message2'] . '</div>';
+                                                            unset($_SESSION['error_message2']);
+                                                        } ?>
+                                                        <?php if (isset($_SESSION['error_message3'])) {
+                                                            echo '<div class="alert alert-success">' . $_SESSION['error_message3'] . '</div>';
+                                                            unset($_SESSION['error_message3']);
+                                                        } ?>
+                                                        <div class="mb-3">
+                                                            <label for="username" class="form-label">Ingresar su correo Electrónico</label>
+                                                            <input autofocus type="text" class="form-control" name="correo" required>
+                                                        </div>
 
-                                                    function hidePasswordResetForm() {
-                                                        document.getElementById('loginForm').style.display = 'block';
-                                                        document.getElementById('passwordResetForm').style.display = 'none';
-                                                        localStorage.removeItem('showPasswordResetForm');
-                                                        
-                                                        // Añade una entrada al historial del navegador
-                                                        history.pushState({ form: 'loginForm' }, '');
-                                                    }
+                                                        <div class="mt-4">
+                                                            <button class="btn btn-success w-100" type="submit">Validar correo</button>
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="text-muted" onclick="showLoginForm()">Retornar</a>
+                                                    </form>
+                                                        <script>
+                                                            function showPasswordResetForm() {
+                                                                document.getElementById('loginForm').style.display = 'none';
+                                                                document.getElementById('passwordResetForm').style.display = 'block';
+                                                                localStorage.setItem('showPasswordResetForm', 'true');
+                                                                
+                                                                // Añade una entrada al historial del navegador
+                                                                history.pushState({ form: 'passwordResetForm' }, '');
+                                                            }
 
-                                                    // Al cargar la página, verificamos cuál formulario mostrar
-                                                    if (localStorage.getItem('showPasswordResetForm') === 'true') {
-                                                        showPasswordResetForm();
-                                                    } else {
-                                                        hidePasswordResetForm();
-                                                    }
+                                                            function hidePasswordResetForm() {
+                                                                document.getElementById('loginForm').style.display = 'block';
+                                                                document.getElementById('passwordResetForm').style.display = 'none';
+                                                                localStorage.removeItem('showPasswordResetForm');
+                                                                
+                                                                // Añade una entrada al historial del navegador
+                                                                history.pushState({ form: 'loginForm' }, '');
+                                                            }
 
-                                                    // Verifica cuál formulario mostrar cuando el estado de carga del documento cambia
-                                                    document.onreadystatechange = function() {
-                                                        if (document.readyState === "interactive") {
+                                                            // Al cargar la página, verificamos cuál formulario mostrar
                                                             if (localStorage.getItem('showPasswordResetForm') === 'true') {
                                                                 showPasswordResetForm();
                                                             } else {
                                                                 hidePasswordResetForm();
                                                             }
-                                                        }
-                                                    };
 
-                                                    // Detecta el evento popstate para mostrar el formulario correcto cuando el usuario pulsa el botón de retroceso
-                                                    window.addEventListener('popstate', function(event) {
-                                                        if (event.state && event.state.form === 'passwordResetForm') {
-                                                            showPasswordResetForm();
-                                                        } else {
-                                                            hidePasswordResetForm();
+                                                            // Verifica cuál formulario mostrar cuando el estado de carga del documento cambia
+                                                            document.onreadystatechange = function() {
+                                                                if (document.readyState === "interactive") {
+                                                                    if (localStorage.getItem('showPasswordResetForm') === 'true') {
+                                                                        showPasswordResetForm();
+                                                                    } else {
+                                                                        hidePasswordResetForm();
+                                                                    }
+                                                                }
+                                                            };
+
+                                                            // Detecta el evento popstate para mostrar el formulario correcto cuando el usuario pulsa el botón de retroceso
+                                                            window.addEventListener('popstate', function(event) {
+                                                                if (event.state && event.state.form === 'passwordResetForm') {
+                                                                    showPasswordResetForm();
+                                                                } else {
+                                                                    hidePasswordResetForm();
+                                                                }
+                                                            });
+                                                            function showLoginForm() {
+                                                            document.getElementById('loginForm').style.display = 'block';
+                                                            document.getElementById('passwordResetForm').style.display = 'none';
+                                                            localStorage.removeItem('showPasswordResetForm');
+                                                            
+                                                            // Añade una entrada al historial del navegador
+                                                            history.pushState({ form: 'loginForm' }, '');
                                                         }
-                                                    });
-                                                    function showLoginForm() {
-                                                    document.getElementById('loginForm').style.display = 'block';
-                                                    document.getElementById('passwordResetForm').style.display = 'none';
-                                                    localStorage.removeItem('showPasswordResetForm');
-                                                    
-                                                    // Añade una entrada al historial del navegador
-                                                    history.pushState({ form: 'loginForm' }, '');
-                                                }
-                                                </script>
+                                                        </script>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <footer class="footer">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> SISTEMA DE VENTAS. Todos los derechos reservados.</p>
+                </div>
+            </div>
             </div>
         </div>
-        <footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="text-center">
-          <p>&copy; <script>document.write(new Date().getFullYear())</script> SISTEMA DE VENTAS. Todos los derechos reservados.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+        </footer>
 
-    </div>
-    <script src="assets/scriptlogin.js"></script>
-    <script src="assets/js/pages/password-addon.init.js"></script>
-    <script src="assets/libs/particles.js/particles.js"></script>
-    <script src="assets/js/pages/particles.app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            </div>
+            <script src="/assets/scriptlogin.js"></script>
+            <script src="/assets/js/pages/password-addon.init.js"></script>
+            <script src="/assets/libs/particles.js/particles.js"></script>
+            <script src="/assets/js/pages/particles.app.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <?php endif; ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

@@ -34,6 +34,9 @@ ENV APACHE_DOCUMENT_ROOT /var/www/html
 # Copiar configuración personalizada de Apache
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
+# Exponer puerto 80
+EXPOSE 80
+
 WORKDIR /var/www/html
 
 # Copiar archivos de la aplicación
